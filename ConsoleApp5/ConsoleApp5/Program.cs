@@ -1,77 +1,68 @@
 ﻿using System;
-
 using System.Collections.Generic;
-
 using System.Linq;
-
 using System.Text;
-
 using System.Threading.Tasks;
 
-namespace Task1
-
+namespace ConsoleApp5
 {
 
-    class Program
+
+
+    public class Student
 
     {
 
-        public static bool isPrime(int x)
+        public string name;
+
+        public int id;
+
+        public int year;
+
+        public Student(string name, int id, int year)
 
         {
 
-            if (x < 2)
+            this.name = name;
 
-                return false;
+            this.id = id;
 
-            for (int j = 2; j <= Math.Sqrt(x); ++j) // Easy Algorithm O(sqrt(x))
-
-                if (x % j == 0)
-
-                    return false;
-
-            return true;
+            this.year = year;
 
         }
 
-        static void Main(string[] args)
+        public Student()
 
         {
 
-            int n;
+            string[] reading = Console.ReadLine().Split();
 
-            n = Convert.ToInt32(Console.ReadLine()); // Reading line and converting to Int
-
-            int[] a = new int[n]; // opening array with n length
-
-            int cnt = 0, x;
-
-            string[] numbers = Console.ReadLine().Split(); // Reading line and split
-
-            for (int i = 0; i < n; ++i) // same as C++
-
+            while (reading.Length != 3)
             {
 
-                x = Convert.ToInt32(numbers[i]);
+                Console.WriteLine("Wrong Input, please input correctly: name id year");
 
-                if (isPrime(x)) // Checking is x prime or not by function
-
-                    a[cnt++] = x;
+                reading = Console.ReadLine().Split();
 
             }
 
-            Console.WriteLine(cnt);
+            this.name = reading[0];
 
-            for (int i = 0; i < cnt; ++i)
+            this.id = Convert.ToInt32(reading[1]);
 
-            {
+            this.year = Convert.ToInt32(reading[2]);
 
-                Console.Write(a[i].ToString() + " "); // Output answers in string form
-
-            }
-            Console.ReadLine();
         }
+
+        public void access()
+
+        {
+
+            Console.WriteLine(name + " " + id + " " + year);
+
+        }
+
+
 
     }
-
 }
