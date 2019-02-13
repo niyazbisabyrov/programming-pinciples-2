@@ -26,9 +26,11 @@ namespace Task1
 
             string text = File.ReadAllText(@"C:\Users\Lenovo\source\repos\PP2\week2\task1\week2\niyazbi.txt");
             text = text.TrimEnd();
+            Console.WriteLine(text);
             char[] txet = text.ToCharArray();
           
             Array.Reverse(txet);
+            Console.WriteLine(txet);
             
             string s = new string(txet);
             if (s == text)
