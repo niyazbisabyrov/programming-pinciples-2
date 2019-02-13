@@ -67,10 +67,12 @@ namespace filemanager1
                 switch (consoleKeyInfo.Key)
                 {
                     case ConsoleKey.UpArrow:
-                        history.Peek().SelectedItem--;
+                        if (history.Peek().SelectedItem > 0)
+                            history.Peek().SelectedItem--;
                         break;
                     case ConsoleKey.DownArrow:
-                        history.Peek().SelectedItem++;
+                        if (history.Peek().Content.Length  - 1 > history.Peek().SelectedItem)
+                            history.Peek().SelectedItem++;
                         break;
                     case ConsoleKey.Enter:
                 int x = history.Peek().SelectedItem;
@@ -111,6 +113,9 @@ namespace filemanager1
                         break;
                     case ConsoleKey.Escape:
                         esc = true;
+                        break;
+                    case ConsoleKey.Delete:
+
                         break;
                 }
                 }
