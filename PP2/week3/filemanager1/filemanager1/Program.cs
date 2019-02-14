@@ -8,8 +8,8 @@ using System.IO;
 namespace filemanager1
 {
     enum ViewMode {
-        dir,
-        file
+        dir,//папка
+        file//файл
     }
 
     class Layer
@@ -19,16 +19,17 @@ namespace filemanager1
             get;//возвращаем занчение
             set;//устанавливаем
         }
-       public int SelectedItem
+       public int SelectedItem//курсор
         {
             get;
             set;
         }
-        public void Draw()
+        public void Draw()//функция которая отвечает за цветовую гамму
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
-
+            
+               
              for(int i = 0; i <Content.Length; ++i)
             {
                 if(i == SelectedItem)
@@ -111,12 +112,13 @@ namespace filemanager1
                             ViewMode = ViewMode.dir;
                         }
                         break;
+                    
                     case ConsoleKey.Escape:
                         esc = true;
                         break;
-                    case ConsoleKey.Delete:
+                    
 
-                        break;
+                       
                 }
                 }
                     

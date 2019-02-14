@@ -31,7 +31,7 @@ namespace Task2
 
                     return false;
 
-            return true;
+            return true;//простая функция для простых чисел
 
         }
 
@@ -39,9 +39,9 @@ namespace Task2
 
         {
 
-            string[] text = File.ReadAllText(@"C:\Users\Lenovo\source\repos\PP2\Week2\Task2\Task2\input.txt").Split();
+            string[] text = File.ReadAllText(@"C:\Users\Lenovo\source\repos\PP2\Week2\Task2\Task2\input.txt").Split();//текстовый файл из директории. сплит чтобы разбить строку на элементы
 
-            using (StreamWriter file = new StreamWriter(@"C:\Users\Lenovo\source\repos\PP2\Week2\Task2\Task2\output.txt"))
+            using (StreamWriter file = new StreamWriter(@"C:\Users\Lenovo\source\repos\PP2\Week2\Task2\Task2\output.txt"))//путь к созданному файлу
             {
 
                 foreach (string number in text)
@@ -52,7 +52,7 @@ namespace Task2
 
                     if (isPrime(x))
 
-                        file.Write(number + " ");
+                        file.Write(number + " ");//если число из инпута простой то его записываем в аутпут вместе с пробелом
 
                 }
 
