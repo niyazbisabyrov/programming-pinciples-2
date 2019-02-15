@@ -5,3 +5,10 @@ C:\Users\Lenovo\source\repos\Task3\ConsoleApp5\obj\Debug\ConsoleApp5.csprojAssem
 C:\Users\Lenovo\source\repos\Task3\ConsoleApp5\obj\Debug\ConsoleApp5.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\source\repos\Task3\ConsoleApp5\obj\Debug\ConsoleApp5.exe
 C:\Users\Lenovo\source\repos\Task3\ConsoleApp5\obj\Debug\ConsoleApp5.pdb
+C:\Users\Lenovo\source\repos\PP2\week1\Task3\Task3\bin\Debug\ConsoleApp5.exe.config
+C:\Users\Lenovo\source\repos\PP2\week1\Task3\Task3\bin\Debug\ConsoleApp5.exe
+C:\Users\Lenovo\source\repos\PP2\week1\Task3\Task3\bin\Debug\ConsoleApp5.pdb
+C:\Users\Lenovo\source\repos\PP2\week1\Task3\Task3\obj\Debug\ConsoleApp5.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\PP2\week1\Task3\Task3\obj\Debug\ConsoleApp5.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\PP2\week1\Task3\Task3\obj\Debug\ConsoleApp5.exe
+C:\Users\Lenovo\source\repos\PP2\week1\Task3\Task3\obj\Debug\ConsoleApp5.pdb

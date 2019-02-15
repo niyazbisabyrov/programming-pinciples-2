@@ -67,14 +67,70 @@ namespace filemanager1
                 ConsoleKeyInfo consoleKeyInfo = Console.ReadKey();
                 switch (consoleKeyInfo.Key)
                 {
+
+                    case ConsoleKey.Delete:
+                        int x2 = history.Peek().SelectedItem;
+                        FileSystemInfo fileSystemInfo2 = history.Peek().Content[x2];
+                        history.Peek().SelectedItem--;
+                        if (fileSystemInfo2.GetType() == typeof(DirectoryInfo))
+                        {
+                            DirectoryInfo directoryInfo = fileSystemInfo2 as DirectoryInfo;
+                            Directory.Delete(fileSystemInfo2.FullName, true);
+                            history.Peek().Content = directoryInfo.Parent.GetFileSystemInfos();
+                        }
+                        else
+                        {
+                            FileInfo fileInfo = fileSystemInfo2 as FileInfo;
+                            File.Delete(fileSystemInfo2.FullName);
+                            history.Peek().Content = fileInfo.Directory.GetFileSystemInfos();
+                        }
+
+                        break;
+
+
+
+
+
+
                     case ConsoleKey.UpArrow:
-                        if (history.Peek().SelectedItem > 0)
-                            history.Peek().SelectedItem--;
+                        if (history.Peek().SelectedItem - 1 < 0)
+                        {
+
+
+
+                            history.Peek().SelectedItem = history.Peek().Content.Length -1;
+                        }
+                        else history.Peek().SelectedItem--;
+                        
                         break;
+
+
+
+
+
+
+
+
+
+
                     case ConsoleKey.DownArrow:
-                        if (history.Peek().Content.Length  - 1 > history.Peek().SelectedItem)
-                            history.Peek().SelectedItem++;
+                        if (history.Peek().Content.Length  - 1 <= history.Peek().SelectedItem)
+                        {
+                            history.Peek().SelectedItem = 0;
+                        }
+
+                            else history.Peek().SelectedItem++;
                         break;
+
+
+
+
+
+
+
+
+
+
                     case ConsoleKey.Enter:
                 int x = history.Peek().SelectedItem;
                         FileSystemInfo fileSystemInfo = history.Peek().Content[x];

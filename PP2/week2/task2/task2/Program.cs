@@ -39,23 +39,24 @@ namespace Task2
 
         {
 
-            string[] text = File.ReadAllText(@"C:\Users\Lenovo\source\repos\PP2\Week2\Task2\Task2\input.txt").Split();//текстовый файл из директории. сплит чтобы разбить строку на элементы
-
+           
+            using (StreamWriter file1 = new StreamWriter(@"C:\Users\Lenovo\source\repos\PP2\Week2\Task2\Task2\input1.txt"))
+               File.Create(@"C:\Users\Lenovo\source\repos\PP2\Week2\Task2\Task2\input1.txt"\\)
             using (StreamWriter file = new StreamWriter(@"C:\Users\Lenovo\source\repos\PP2\Week2\Task2\Task2\output.txt"))//путь к созданному файлу
             {
 
                 foreach (string number in text)
 
                 {
-
+                    
                     int x = Convert.ToInt32(number);
 
                     if (isPrime(x))
 
                         file.Write(number + " ");//если число из инпута простой то его записываем в аутпут вместе с пробелом
-
+                    
                 }
-
+                file1.delete();
             }
 
         }
